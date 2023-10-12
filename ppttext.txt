@@ -1,0 +1,82 @@
+FC team
+-->1)cwis 15866
+this is actually a bug where in that sorting functionality is missed now we have added the sorting functionality with arrows
+-->2)cwis 7276
+previously cancellation source was not listed in order lines table with this story we are now adding cancelled by column to show cancellation source.
+-->3)cwis 15605
+there are 2 applictions 
+1)cff dashboard
+2)webgui 
+These two applications servicenow link has to be updated.
+based on the request type and url.
+-->4)cwis 15890:
+in cff dashboard filter has little moved to below(at the middle of the page)need to fix it in proper position.
+----------------------------
+-->CWIS-15605
+Update service now incident link in CFF Dashboard and CWIS WebUI
+Users facing issues while using CFF Dashboard or
+the CWIS WebUI often email CWIS.support.in@ingka.com
+, resulting in delays in getting CWIS to respond.
+now they are Updating the following service now incident link to create incident to CWIS instead of mailing.
+-------
+-->CWIS-7276 - Show cancelling order system in the order search result
+If a user looks up a cancelled order in the order search, it would be interesting to
+see for the user, whether that order has been cancelled by the customer or by a specific system.
+------------
+-->CWIS-15866-D_CWIS_Regression : Issue with sorting using OBSERVATION PERIOD (UTC)
+and OBSERVATION PERIOD (LT) of Anomaly Report page
+Currently arrows for sorting are missing and not able to sort using
+OBSERVATION PERIOD (UTC) and OBSERVATION PERIOD (LT).
+user not able to sorting the list.
+---------------------
+
+
+CF Team
+-------
+-->CWIS – 15788
+Build Install Scripts from GitHub Actions
+We are doing migration from jenks to github actions
+To generate install scripts for the CWIS deployments.
+-->CWIS-15801
+CWIS Clean Deployment using GitHub Actions
+We are implementing new pipeline for cleandeployment using githubaction
+-->CWIS-15795
+Deployments using GitHub Actions
+this is also one of the migration task for deployments
+-->CWIS-15802
+CWIS utPLSQL Testexecution
+(Building Pipeline in GUITHUB Actions, it is used to run the utplsql scripts in GUIHUB)
+-->CWIS-15903(now they are in testing phase)
+Deactivate order jobs to data bridge
+( Order data flow to CT bridge shall be deactivated. It must be assured, that there will not be any impact on stock flow towards the data bridge.
+After a first glance it needs to
+• drop trigger(s)
+• decommission code related to data send to CT
+• drop jobs related to order related data send to CT. 
+-------------
+
+
+pheonix and helion
+-----------
+-->CWIS-15837
+there is a runtime parameter to specify the topic prefix that will be added automatically on execution
+-->CWIS-15767
+they implement BDD tests for the release-order-inbound-ms in the goes-test-framework to define requirements in the code.
+All steps in the sync release order inbound feature files are implemented and executable
+-->CWIS-15969
+they will implement the Store Executeable Order Flow in GOES to stabilize the CWIS.
+-->CWIS-15946
+they will create the GOES PostgreSQL database with our microservices. Currently the Logistic_Units table is not created in the databases. 
+Therefore we want to create in all environments with the same schema as it is in CWIS.
+here they will create the goes database and fill the data
+
+
+Gis
+----------------
+-->SIM-394 :Define TTYP210
+TT210 is an automatic Transaction Type for goods reception from a Supplier to a Store. This TT increases the stock in the Store.
+-->SIM-367 : Define TT201
+ (this is definition of transaction type that we(they) are going to receive in case of receiving consignment from DC)
+-->SIM-1887:Re-apply change when subscribers are ready
+in this task they are re-applying changes related to return_line_id for TTYP320 and TTYP325 as iRecovery and BOT teams are ready to accept new field
+
